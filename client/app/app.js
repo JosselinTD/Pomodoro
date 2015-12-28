@@ -15,7 +15,7 @@ angular.module('pomodoroApp', [
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/login'
       });
 
     $locationProvider.html5Mode(true);
