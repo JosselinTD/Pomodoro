@@ -1,0 +1,23 @@
+<div>
+	<div class="container">
+		<h1>The pomodoro</h1>
+		<form ng-submit="sendPomodoro()">
+			<div class="form-group">
+				<h2>Title</h2>
+				<input type="text" ng-model="pomodoro.name"/>
+			</div>
+			<h2>Comments</h2>
+			<fieldset>
+				<div class="form-group" ng-repeat="comment in pomodoro.comments">
+					<input type="text" ng-model="comment.content"/>
+					<span class="glyphicon glyphicon-remove" ng-click="pomodoro.comments.splice($index, 1)"></span>
+				</div>
+				<span class="btn btn-default" ng-click="pomodoro.comments.push({content:''})">
+					<span class="glyphicon glyphicon-plus"></span>
+					Add a comment
+				</span>
+			</fieldset>
+			<input type="submit" class="btn btn-primary"/>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<navbar></navbar>
+
+<div class="container options">
+	<options></options>
+
+	<div class="row current-tasks">
+		<h1>Tâches en cours</h1>
+		<pomodoro-item pomodoro="pomodoro" ng-repeat="pomodoro in pomodoros | filter: {ended: false}"></pomodoro-item>
+	</div>
+
+	<div class="row ended-tasks">
+		<h1>Tâches terminées</h1>
+		<pomodoro-item pomodoro="pomodoro" ng-repeat="pomodoro in pomodoros | filter: {ended: true}"></pomodoro-item>
+	</div>
+</div>

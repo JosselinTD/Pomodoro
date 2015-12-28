@@ -10,6 +10,10 @@ class SignupController {
   constructor(Auth, $location) {
     this.Auth = Auth;
     this.$location = $location;
+
+    if(Auth.isLoggedIn()){
+      $location.path('/');
+    }
   }
 
   register(form) {
