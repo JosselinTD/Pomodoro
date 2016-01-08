@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('pomodoroApp')
-  .service('PomodoroService', function ($http, socket) {
+  .service('PomodoroService', function ($http, socket, Auth) {
     var serv = this,
     	endpoint = '/api/pomodoros';
     serv.pomodoros = [];
@@ -28,6 +28,7 @@ angular.module('pomodoroApp')
     	if(pomodoro._id){
     		$http.put(endpoint+"/"+pomodoro._id, pomodoro);
     	} else {
+    		pomodoro.user = Auth.getCurrentUser();
     		$http.post(endpoint, pomodoro);
     	}
     };

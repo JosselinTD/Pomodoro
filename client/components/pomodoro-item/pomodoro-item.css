@@ -1,0 +1,26 @@
+.pomodoro-item{
+	display:inline-block;
+	vertical-align: top;
+	border-radius:3px;
+	border:1px solid #4393B9;
+	margin:5px;
+}
+
+.pomodoro-item header{
+	background-color: #4393B9;
+	color:white;
+}
+
+.pomodoro-item header h1{
+	font-size:2em;
+	margin: 5px 5px;
+}
+
+.pomodoro-item header .little-options{
+	display:inline-block;
+	margin-left:15px;
+}
+
+.pomodoro-item header > h1{
+	display: inline-block;
+}

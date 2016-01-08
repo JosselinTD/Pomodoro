@@ -8,4 +8,8 @@ angular.module('pomodoroApp')
     $scope.pomodoros = PomodoroService.pomodoros;
 
     $scope.openPomodoroModal = PomodoroModal.open;
+
+    $scope.userFilter = function(pom){
+    	return pom.user._id === Auth.getCurrentUser()._id;
+    };
   });
