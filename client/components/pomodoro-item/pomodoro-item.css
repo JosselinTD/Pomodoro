@@ -19,8 +19,14 @@
 .pomodoro-item header .little-options{
 	display:inline-block;
 	margin-left:15px;
+	margin-right: 10px;
 }
 
 .pomodoro-item header > h1{
 	display: inline-block;
+}
+
+.pomodoro-item .comment{
+	white-space: pre;
+	padding: 10px;
 }

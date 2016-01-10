@@ -3,7 +3,7 @@
 angular.module('pomodoroApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/pomodoro', {
         templateUrl: 'app/pomodoro/pomodoro.html',
         controller: 'PomodoroCtrl',
         authenticate: true

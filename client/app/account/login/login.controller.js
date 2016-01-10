@@ -12,7 +12,7 @@ class LoginController {
     this.$location = $location;
 
     if(Auth.isLoggedIn()){
-      $location.path('/');
+      $location.path('/pomodoro');
     }
   }
 
@@ -26,7 +26,7 @@ class LoginController {
       })
       .then(() => {
         // Logged in, redirect to home
-        this.$location.path('/');
+        this.$location.path('/pomodoro');
       })
       .catch(err => {
         this.errors.other = err.message;

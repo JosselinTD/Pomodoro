@@ -1,12 +1,13 @@
 'use strict';
 
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
+var User = require("./../user/user.model.js");
 var UserSchema = require('mongoose').model('User').schema;
 
 var PomodoroSchema = new mongoose.Schema({
   name: String,
   ended: Boolean,
-  comments: [mongoose.Schema.Types.Mixed],
+  comment: String,
   user: UserSchema
 });
 

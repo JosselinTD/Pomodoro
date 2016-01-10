@@ -1,0 +1,22 @@
+<div class="pomodoro-timer">
+	<h1 ng-bind="title"></h1>
+	<timer 
+		countdown="1500" 
+		max-time-unit="'minute'"
+		interval="1000"
+		finish-callback="showVideo()">
+		Temps restant : {{mminutes}} minute{{minutesS}}, {{sseconds}} second{{secondsS}}
+		<div class="progress progress-striped active {{displayProgressActive}}"
+			style="height: 30px;"> 
+			<div class="progress-bar" style="width: {{progressBar}}%;height: 30px"></div> 
+		</div>
+	</timer>
+	<iframe 
+		width="560" 
+		height="315" 
+		src="https://www.youtube.com/embed/-6qZ9A6GFik?autoplay=1" 
+		frameborder="0" 
+		allowfullscreen
+		ng-if="isEnded()">
+	</iframe>
+</div>

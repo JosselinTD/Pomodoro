@@ -12,7 +12,7 @@ class SignupController {
     this.$location = $location;
 
     if(Auth.isLoggedIn()){
-      $location.path('/');
+      $location.path('/pomodoro');
     }
   }
 
@@ -27,7 +27,7 @@ class SignupController {
       })
       .then(() => {
         // Account created, redirect to home
-        this.$location.path('/');
+        this.$location.path('/pomodoro');
       })
       .catch(err => {
         err = err.data;

@@ -1,9 +1,8 @@
 'use strict';
 
 angular.module('pomodoroApp')
-  .controller('PomodoroItemCtrl', function ($scope, PomodoroModal, PomodoroService) {
+  .controller('PomodoroItemCtrl', function ($scope, PomodoroModal, PomodoroService, PomodoroTimerService) {
     $scope.openPomodoroModal = function(){
-    	console.log($scope.pomodoro._id);
     	PomodoroModal.open($scope.pomodoro._id);
     };
     $scope.toggleValidation = function(){
@@ -13,5 +12,8 @@ angular.module('pomodoroApp')
     };
     $scope.removePomodoro = function(){
     	PomodoroService.remove($scope.pomodoro._id);
+    };
+    $scope.play = function(){
+        PomodoroTimerService.open($scope.pomodoro.name);
     };
   });

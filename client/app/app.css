@@ -38,3 +38,9 @@
   padding: 0.2em 0;
 }
 
+html{
+  min-height: 100vh;
+  background-image: url(../assets/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: 95% 95%;
+}

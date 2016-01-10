@@ -10,7 +10,8 @@ angular.module('pomodoroApp', [
   'ngRoute',
   'btford.socket-io',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'timer'
 ])
   .config(function($routeProvider, $locationProvider) {
     $routeProvider

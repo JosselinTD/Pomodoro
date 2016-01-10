@@ -3,6 +3,7 @@
 		<h1 ng-bind="pomodoro.name"></h1>
 		<div class="little-options">
 			<h4>
+				<span class="glyphicon glyphicon-play" ng-click="play()"></span>
 				<span class="glyphicon glyphicon-edit" ng-click="openPomodoroModal()"></span>
 				<span class="glyphicon glyphicon-ok" ng-click="toggleValidation()"></span>
 				<span class="glyphicon glyphicon-remove" ng-click="removePomodoro()"></span>
@@ -10,6 +11,6 @@
 		</div>
 	</header>
 	<div class="comments">
-		<div class="comment" ng-repeat="comment in pomodoro.comments" ng-bind="comment.content"></div>
+		<div class="comment" ng-bind="pomodoro.comment"></div>
 	</div>
 </div>
